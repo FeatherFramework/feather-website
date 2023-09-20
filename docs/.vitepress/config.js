@@ -1,7 +1,7 @@
 import { getSidebar } from "vitepress-plugin-auto-sidebar";
 
 export default {
-  base: "/feather-website/",
+  base: "/",
   title: "Feather Framework",
   description: "Feather Framework",
   lastUpdated: true,
