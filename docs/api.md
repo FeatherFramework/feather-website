@@ -28,7 +28,7 @@ head:
       href: logo.png
 ---
 
-# Feather Core Docs
+# Feather Core Docs <Badge type="warning" text="alpha" />
 > Welcome to Feather Core, the beating heart of the Feather Framework; An extraordinary open-source RedM framework designed to bring our ultimate RedM server visions to life.
 
 ## Initialize The Core

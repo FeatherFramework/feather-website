@@ -1,0 +1,19 @@
+# Miscilaneous API
+
+## Get Distance Between coords
+
+| Parameter | Description                                         |
+| --------- | --------------------------------------------------- |
+| first | coords in vector3               |
+| second  | coords in vector3 |
+
+`FeatherCore.misc.GetDistanceBetween(first, second)`
+
+Example Usage:
+
+```lua
+-- Client
+Citizen.CreateThread(function()
+    FeatherCore.misc.GetDistanceBetween(vector3(0, 0, 0), vector3(1, 1, 1))
+end)
+```

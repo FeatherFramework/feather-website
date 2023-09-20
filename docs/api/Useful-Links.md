@@ -1,13 +1,7 @@
-# REDM Game References
+# Useful links for RedM Development
 
-* Contains objects peds vehicles in images also natives
+[`Red Lookup`](https://redlookup.com/) - Contains objects peds vehicles in images also natives
 
-[`Red Lookup`](https://redlookup.com/)
+[`Vespura natives`](https://vespura.com/doc/natives/) - A list of available RedM Natives
 
-* offical Natives Website
-
-[`Vespura natives`](https://vespura.com/doc/natives/)
-
-* RDR3 discoveries  almost everything you need to develop your resources
-
-[`Rdr3 Discoveries`](https://github.com/femga/rdr3_discoveries)
+[`Rdr3 Discoveries`](https://github.com/femga/rdr3_discoveries) - A repo full of RedM reseach and discoveries.
