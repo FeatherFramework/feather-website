@@ -10,6 +10,9 @@ head:
     - property: og:title
       content: Feather Framework
   - - meta
+    - property: og:description
+      content: Unlock Boundless Possibilities with Feather Framework
+  - - meta
     - property: og:image
       content: https://avatars.githubusercontent.com/u/140788019?s=200&v=4
   - - meta

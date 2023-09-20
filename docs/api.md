@@ -11,11 +11,14 @@ head:
     - property: og:title
       content: Feather Framework Docs
   - - meta
+    - property: og:description
+      content: Official Feather Framework Documentation
+  - - meta
     - property: og:image
       content: https://avatars.githubusercontent.com/u/140788019?s=200&v=4
   - - meta
     - name: title
-      content: Feather Framework Docs
+      content: Official Feather Framework Documentation
   - - meta
     - name: twitter:card
       content: https://avatars.githubusercontent.com/u/140788019?s=200&v=4
