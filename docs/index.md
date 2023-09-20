@@ -71,7 +71,7 @@ features:
     <div class="max-w-md">
       <img src="/oss.png" class="mx-auto min-w-20 prevent-select"/>
       <h1 class="text-5xl font-bold prevent-select tert-clip">Open Source. Free. Always.</h1>
-      <p class="py-6 prevent-select">Our RedM roleplay scripts are made and maintained purely as a labor of love, driven by the community with passion for roleplaying and the desire to share our creations with others. We offer them freely and as a way to contribute to the community and help others explore and enjoy the art of roleplaying and programming.</p>
+      <p class="py-6 prevent-select">Our framework is made and maintained purely as a labor of love, driven by the community with passion for roleplaying and the desire to share our creations with others. We offer this framework and sctripts freely and as a way to contribute to the community and help others explore and enjoy the art of roleplaying and programming.</p>
       <button class="bg-primary hover:bg-secondary text-white font-medium py-2 px-4 rounded-full" @click="actionClicked">Help Contribute</button>
     </div>
   </div>
