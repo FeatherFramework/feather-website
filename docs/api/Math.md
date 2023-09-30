@@ -1,4 +1,4 @@
-# Miscilaneous API
+# Math API
 
 ## Get Distance Between coords
 
@@ -14,6 +14,6 @@ Example Usage:
 ```lua
 -- Client
 Citizen.CreateThread(function()
-    FeatherCore.misc.GetDistanceBetween(vector3(0, 0, 0), vector3(1, 1, 1))
+    FeatherCore.Math.GetDistanceBetween(vector3(0, 0, 0), vector3(1, 1, 1))
 end)
 ```
