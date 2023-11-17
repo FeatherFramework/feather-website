@@ -1,5 +1,5 @@
 # Initialize the Core
 
 ```lua
-FeatherCore =  exports['feather-core'].initiate()=
+FeatherCore =  exports['feather-core'].initiate()
 ```
