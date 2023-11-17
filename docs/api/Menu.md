@@ -354,14 +354,6 @@ Example Usage:
 MyMenu:Close()
 ```
 
-## Close Menu
-
-Example Usage:
-
-```lua
-MyMenu:Close()
-```
-
 ## Route to/Show a Page
 
 > The menu must be open already
