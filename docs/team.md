@@ -79,7 +79,7 @@ const developers = [
         ]
     },
     {
-        avatar: 'https://cdn.discordapp.com/avatars/158685119341789185/a_0a04541843da0b440dcc0f4f4a4f288f?size=1024',
+        avatar: 'https://avatars.githubusercontent.com/u/9192488?v=4',
         name: 'Elzetia',
         title: 'Developer',
         links: [

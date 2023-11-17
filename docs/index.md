@@ -37,7 +37,7 @@ hero:
   image:
     src: /logo2.png
     alt: Feather Framework logo
-  tagline: Where Passion Meets Code, and Community Thrives
+  tagline: Where Passion Meets Code, and Communities Thrive
   actions:
     - theme: brand
       text: Get Started
