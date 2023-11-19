@@ -40,7 +40,7 @@ local MyMenu = FeatherMenu:RegisterMenu('feather:character:menu', {
         -- ['background-color'] = '#515A5A'
     },
     contentslot = {
-        style = {
+        style = { --This style is what is currently making the content slot scoped and scrollable. If you delete this, it will make the content height dynamic to its inner content.
             ['height'] = '300px',
             ['min-height'] = '300px'
         }
@@ -65,6 +65,10 @@ local MyFirstPage = MyMenu:RegisterPage('first:page')
 ```
 
 ## Add Header to Page
+
+::: tip
+This element is what is draggable, without this element, you cannot drag a menu.
+:::
 
 | Parameter | Description                                            |
 | --------- | ------------------------------------------------------ |
