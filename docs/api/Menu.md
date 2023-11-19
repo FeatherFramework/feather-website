@@ -21,6 +21,7 @@ FeatherMenu =  exports['feather-menu'].initiate()
 | style             | CSS style overrides                      |
 | contentslot.style | CSS style overrides for the content slot |
 | draggable         | If the window can be dragged             |
+| canclose          | If the user can close the menu with "X"  |
 
 Example Usage:
 
@@ -44,7 +45,8 @@ local MyMenu = FeatherMenu:RegisterMenu('feather:character:menu', {
             ['min-height'] = '300px'
         }
     },
-    draggable = true
+    draggable = true,
+    --canclose = false
 })
 ```
 
@@ -176,6 +178,40 @@ MyFirstPage:RegisterElement('input', {
 end)
 ```
 
+## Add TextArea to Page
+
+| Parameter   | Description                                                |
+| ----------- | ---------------------------------------------------------- |
+| label       | The text to display                                        |
+| placeholder | The text to display when nothing is entered into the input |
+| slot        | There are 3 slots available, (header, content, footer)     |
+| style       | CSS style overrides                                        |
+| rows        | How many rows for the areatext to take up                  |
+| cols        | How many cols for the areatext to take up                  |
+| resize      | Is the textarea resizable                                  |
+
+Example Usage:
+
+```lua
+local inputValue = ''
+MyFirstPage:RegisterElement('textarea', {
+    label = "My First TextArea",
+    placeholder = "Type something!",
+    rows = "4",
+    cols = "33",
+    resize = false,
+    style = {
+        -- ['background-image'] = 'none',
+        -- ['background-color'] = '#E8E8E8',
+        -- ['color'] = 'black',
+        -- ['border-radius'] = '6px'
+    }
+}, function(data)
+    print("Input Triggered: ", data.value)
+    inputValue = data.value
+end)
+```
+
 ## Add Button to Page
 
 | Parameter | Description                                            |
@@ -183,6 +219,7 @@ end)
 | label     | The text to display                                    |
 | slot      | There are 3 slots available, (header, content, footer) |
 | style     | CSS style overrides                                    |
+| sound     | Play a rdr sound effect                                |
 
 Example Usage:
 
@@ -194,7 +231,11 @@ MyFirstPage:RegisterElement('button', {
         -- ['background-color'] = '#E8E8E8',
         -- ['color'] = 'black',
         -- ['border-radius'] = '6px'
-    }
+    },
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- },
 }, function()
     -- This gets triggered whenever the button is clicked
 end)
@@ -209,6 +250,7 @@ end)
 | options   | This is the options to select through, this can be a string or table. If its a table you must have "display" so that a value shows up |
 | slot      | There are 3 slots available, (header, content, footer)                                                                                |
 | style     | CSS style overrides                                                                                                                   |
+| sound     | Play a rdr sound effect                                                                                                               |
 
 Example Usage:
 
@@ -226,7 +268,11 @@ Example Usage:
         "Red",
         "Silver",
         "White"
-    }
+    },
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- },
 }, function(data)
     -- This gets triggered whenever the arrow selected value changes
     print(TableToString(data.value))
@@ -244,6 +290,7 @@ end)
 | steps     | How many numbers to skip per slider tick               |
 | slot      | There are 3 slots available, (header, content, footer) |
 | style     | CSS style overrides                                    |
+| sound     | Play a rdr sound effect                                |
 
 Example Usage:
 
@@ -253,7 +300,11 @@ MyFirstPage:RegisterElement('slider', {
     start = 1,
     min = 0,
     max = 100,
-    steps = 1
+    steps = 1,
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- },
 }, function(data)
     -- This gets triggered whenever the sliders selected value changes
     print(TableToString(data.value))
@@ -268,13 +319,18 @@ end)
 | start     | What boolean value to start at (true/false)            |
 | slot      | There are 3 slots available, (header, content, footer) |
 | style     | CSS style overrides                                    |
+| sound     | Play a rdr sound effect                                |
 
 Example Usage:
 
 ```lua
 MyFirstPage:RegisterElement("toggle", {
     label = "Glasses",
-    start = true
+    start = true,
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- }
 }, function(data)
     -- This gets triggered whenever the toggle value changes
     print(data.value)
@@ -310,6 +366,7 @@ MyFirstPage:RegisterElement("html", {
 | current   | What page number to show (display number) ex: x/3      |
 | slot      | There are 3 slots available, (header, content, footer) |
 | style     | CSS style overrides                                    |
+| sound     | Play a rdr sound effect                                |
 
 Example Usage:
 
@@ -318,7 +375,11 @@ MyFirstPage:RegisterElement('pagearrows', {
     slot = "footer",
     total = 3,
     current = 1,
-    style = {}
+    style = {},
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- }
 }, function(data)
     if data.value == 'forward' then
         print('Forward')
@@ -335,6 +396,7 @@ end)
 | cursorFocus | Nui Cursor Focus (true/false)        |
 | menuFocus   | Nui Menu Focus (true/false)          |
 | startupPage | What page to default to when opening |
+| sound       | Play a rdr sound effect              |
 
 Example Usage:
 
@@ -342,16 +404,29 @@ Example Usage:
 MyMenu:Open({
     -- cursorFocus = false,
     -- menuFocus = false,
-    startupPage = MyFirstPage
+    startupPage = MyFirstPage,
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- }
 })
 ```
 
 ## Close Menu
 
+| Parameter | Description             |
+| --------- | ----------------------- |
+| sound     | Play a rdr sound effect |
+
 Example Usage:
 
 ```lua
-MyMenu:Close()
+MyMenu:Close({
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- }
+})
 ```
 
 ## Route to/Show a Page
@@ -622,7 +697,7 @@ RegisterCommand('TestMenu', function()
         -- cursorFocus = false,
         -- menuFocus = false,
         startupPage = MyFirstPage
-    }) 
+    })
 end)
 
 ```
