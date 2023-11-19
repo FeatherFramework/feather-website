@@ -151,12 +151,13 @@ TextDisplay = MyFirstPage:RegisterElement('textdisplay', {
 
 ## Add Input to Page
 
-| Parameter   | Description                                                |
-| ----------- | ---------------------------------------------------------- |
-| label       | The text to display                                        |
-| placeholder | The text to display when nothing is entered into the input |
-| slot        | There are 3 slots available, (header, content, footer)     |
-| style       | CSS style overrides                                        |
+| Parameter   | Description                                                           |
+| ----------- | --------------------------------------------------------------------- |
+| label       | The text to display                                                   |
+| placeholder | The text to display when nothing is entered into the input            |
+| slot        | There are 3 slots available, (header, content, footer)                |
+| persist     | Determines if the user input value should persist when changing pages |
+| style       | CSS style overrides                                                   |
 
 Example Usage:
 
@@ -165,6 +166,7 @@ local inputValue = ''
 MyFirstPage:RegisterElement('input', {
     label = "My First Input",
     placeholder = "Type something!",
+    -- persist = false,
     style = {
         -- ['background-image'] = 'none',
         -- ['background-color'] = '#E8E8E8',
@@ -189,6 +191,7 @@ end)
 | rows        | How many rows for the areatext to take up                  |
 | cols        | How many cols for the areatext to take up                  |
 | resize      | Is the textarea resizable                                  |
+| persist     | Determines if the user input value should persist when changing pages |
 
 Example Usage:
 
@@ -200,6 +203,7 @@ MyFirstPage:RegisterElement('textarea', {
     rows = "4",
     cols = "33",
     resize = false,
+    -- persist = false,
     style = {
         -- ['background-image'] = 'none',
         -- ['background-color'] = '#E8E8E8',
@@ -250,7 +254,8 @@ end)
 | options   | This is the options to select through, this can be a string or table. If its a table you must have "display" so that a value shows up |
 | slot      | There are 3 slots available, (header, content, footer)                                                                                |
 | style     | CSS style overrides                                                                                                                   |
-| sound     | Play a rdr sound effect                                                                                                               |
+| sound     | Play a rdr sound effect   
+| persist     | Determines if the user input value should persist when changing pages |                                                                                                            |
 
 Example Usage:
 
@@ -269,6 +274,7 @@ Example Usage:
         "Silver",
         "White"
     },
+    -- persist = false,
     -- sound = {
     --     action = "SELECT",
     --     soundset = "RDRO_Character_Creator_Sounds"
@@ -291,6 +297,7 @@ end)
 | slot      | There are 3 slots available, (header, content, footer) |
 | style     | CSS style overrides                                    |
 | sound     | Play a rdr sound effect                                |
+| persist     | Determines if the user input value should persist when changing pages |
 
 Example Usage:
 
@@ -301,6 +308,7 @@ MyFirstPage:RegisterElement('slider', {
     min = 0,
     max = 100,
     steps = 1,
+    -- persist = false,
     -- sound = {
     --     action = "SELECT",
     --     soundset = "RDRO_Character_Creator_Sounds"
@@ -320,6 +328,7 @@ end)
 | slot      | There are 3 slots available, (header, content, footer) |
 | style     | CSS style overrides                                    |
 | sound     | Play a rdr sound effect                                |
+| persist     | Determines if the user input value should persist when changing pages |
 
 Example Usage:
 
@@ -327,6 +336,7 @@ Example Usage:
 MyFirstPage:RegisterElement("toggle", {
     label = "Glasses",
     start = true,
+    -- persist = false,
     -- sound = {
     --     action = "SELECT",
     --     soundset = "RDRO_Character_Creator_Sounds"
@@ -367,6 +377,7 @@ MyFirstPage:RegisterElement("html", {
 | slot      | There are 3 slots available, (header, content, footer) |
 | style     | CSS style overrides                                    |
 | sound     | Play a rdr sound effect                                |
+| persist     | Determines if the user input value should persist when changing pages |
 
 Example Usage:
 
@@ -376,6 +387,7 @@ MyFirstPage:RegisterElement('pagearrows', {
     total = 3,
     current = 1,
     style = {},
+    -- persist = false,
     -- sound = {
     --     action = "SELECT",
     --     soundset = "RDRO_Character_Creator_Sounds"
@@ -450,6 +462,14 @@ TextDisplay:update({
     value = "Hello World!",
     style = {}
 })
+```
+
+## Unregister Element
+
+Example Usage:
+
+```lua
+TextDisplay:unRegister()
 ```
 
 ## Full three page Example
