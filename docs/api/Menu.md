@@ -454,6 +454,9 @@ TextDisplay:update({
 
 ## Full two page Example
 
+![image](https://github.com/FeatherFramework/feather-menu/assets/10902965/a6b73f8e-a851-4478-b332-5b20559ac9a5)
+![image](https://github.com/FeatherFramework/feather-menu/assets/10902965/2a689fa2-b51d-426a-a754-a8287ed4c755)
+
 ```lua
 local function TableToString(o)
     if type(o) == 'table' then
