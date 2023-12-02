@@ -70,11 +70,12 @@ local MyFirstPage = MyMenu:RegisterPage('first:page')
 This element is what is draggable, without this element, you cannot drag a menu.
 :::
 
-| Parameter | Description                                            |
-| --------- | ------------------------------------------------------ |
-| value     | The text to display                                    |
-| slot      | There are 3 slots available, (header, content, footer) |
-| style     | CSS style overrides                                    |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| value     | The text to display                                                                                                 |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -88,11 +89,12 @@ MyFirstPage:RegisterElement('header', {
 
 ## Add SubHeader to Page
 
-| Parameter | Description                                            |
-| --------- | ------------------------------------------------------ |
-| value     | The text to display                                    |
-| slot      | There are 3 slots available, (header, content, footer) |
-| style     | CSS style overrides                                    |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| value     | The text to display                                                                                                 |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -106,10 +108,11 @@ MyFirstPage:RegisterElement('subheader', {
 
 ## Add Line to Page
 
-| Parameter | Description                                            |
-| --------- | ------------------------------------------------------ |
-| slot      | There are 3 slots available, (header, content, footer) |
-| style     | CSS style overrides                                    |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -122,10 +125,11 @@ MyFirstPage:RegisterElement('line', {
 
 ## Add BottomLine to Page
 
-| Parameter | Description                                            |
-| --------- | ------------------------------------------------------ |
-| slot      | There are 3 slots available, (header, content, footer) |
-| style     | CSS style overrides                                    |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -138,11 +142,12 @@ MyFirstPage:RegisterElement('bottomline', {
 
 ## Add TextView to Page
 
-| Parameter | Description                                            |
-| --------- | ------------------------------------------------------ |
-| value     | The text to display                                    |
-| slot      | There are 3 slots available, (header, content, footer) |
-| style     | CSS style overrides                                    |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| value     | The text to display                                                                                                 |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -155,13 +160,14 @@ TextDisplay = MyFirstPage:RegisterElement('textdisplay', {
 
 ## Add Input to Page
 
-| Parameter   | Description                                                           |
-| ----------- | --------------------------------------------------------------------- |
-| label       | The text to display                                                   |
-| placeholder | The text to display when nothing is entered into the input            |
-| slot        | There are 3 slots available, (header, content, footer)                |
-| persist     | Determines if the user input value should persist when changing pages |
-| style       | CSS style overrides                                                   |
+| Parameter   | Description                                                                                                         |
+| ----------- | ------------------------------------------------------------------------------------------------------------------- |
+| label       | The text to display                                                                                                 |
+| placeholder | The text to display when nothing is entered into the input                                                          |
+| slot        | There are 3 slots available, (header, content, footer)                                                              |
+| persist     | Determines if the user input value should persist when changing pages                                               |
+| style       | CSS style overrides                                                                                                 |
+| id          | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -186,16 +192,17 @@ end)
 
 ## Add TextArea to Page
 
-| Parameter   | Description                                                |
-| ----------- | ---------------------------------------------------------- |
-| label       | The text to display                                        |
-| placeholder | The text to display when nothing is entered into the input |
-| slot        | There are 3 slots available, (header, content, footer)     |
-| style       | CSS style overrides                                        |
-| rows        | How many rows for the areatext to take up                  |
-| cols        | How many cols for the areatext to take up                  |
-| resize      | Is the textarea resizable                                  |
-| persist     | Determines if the user input value should persist when changing pages |
+| Parameter   | Description                                                                                                         |
+| ----------- | ------------------------------------------------------------------------------------------------------------------- |
+| label       | The text to display                                                                                                 |
+| placeholder | The text to display when nothing is entered into the input                                                          |
+| slot        | There are 3 slots available, (header, content, footer)                                                              |
+| style       | CSS style overrides                                                                                                 |
+| rows        | How many rows for the areatext to take up                                                                           |
+| cols        | How many cols for the areatext to take up. If not set, it will default to 100% width (dynamic)                                                                           |
+| resize      | Is the textarea resizable                                                                                           |
+| persist     | Determines if the user input value should persist when changing pages                                               |
+| id          | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -205,7 +212,7 @@ MyFirstPage:RegisterElement('textarea', {
     label = "My First TextArea",
     placeholder = "Type something!",
     rows = "4",
-    cols = "33",
+    -- cols = "14",
     resize = false,
     -- persist = false,
     style = {
@@ -222,12 +229,13 @@ end)
 
 ## Add Button to Page
 
-| Parameter | Description                                            |
-| --------- | ------------------------------------------------------ |
-| label     | The text to display                                    |
-| slot      | There are 3 slots available, (header, content, footer) |
-| style     | CSS style overrides                                    |
-| sound     | Play a rdr sound effect                                |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| label     | The text to display                                                                                                 |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| sound     | Play a rdr sound effect                                                                                             |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -252,14 +260,14 @@ end)
 ## Add Arrows to Page
 
 | Parameter | Description                                                                                                                           |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | label     | The text to display                                                                                                                   |
 | start     | What index to default to display                                                                                                      |
 | options   | This is the options to select through, this can be a string or table. If its a table you must have "display" so that a value shows up |
 | slot      | There are 3 slots available, (header, content, footer)                                                                                |
 | style     | CSS style overrides                                                                                                                   |
-| sound     | Play a rdr sound effect   
-| persist     | Determines if the user input value should persist when changing pages |                                                                                                            |
+| sound     | Play a rdr sound effect                                                                                                               |
+| persist   | Determines if the user input value should persist when changing pages                                                                 |     |
 
 Example Usage:
 
@@ -291,17 +299,18 @@ end)
 
 ## Add Slider to Page
 
-| Parameter | Description                                            |
-| --------- | ------------------------------------------------------ |
-| label     | The text to display                                    |
-| start     | What number to start at                                |
-| min       | The minimum number within the range                    |
-| max       | The maximum number within the range                    |
-| steps     | How many numbers to skip per slider tick               |
-| slot      | There are 3 slots available, (header, content, footer) |
-| style     | CSS style overrides                                    |
-| sound     | Play a rdr sound effect                                |
-| persist     | Determines if the user input value should persist when changing pages |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| label     | The text to display                                                                                                 |
+| start     | What number to start at                                                                                             |
+| min       | The minimum number within the range                                                                                 |
+| max       | The maximum number within the range                                                                                 |
+| steps     | How many numbers to skip per slider tick                                                                            |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| sound     | Play a rdr sound effect                                                                                             |
+| persist   | Determines if the user input value should persist when changing pages                                               |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -325,14 +334,15 @@ end)
 
 ## Add Toggle to Page
 
-| Parameter | Description                                            |
-| --------- | ------------------------------------------------------ |
-| label     | The text to display                                    |
-| start     | What boolean value to start at (true/false)            |
-| slot      | There are 3 slots available, (header, content, footer) |
-| style     | CSS style overrides                                    |
-| sound     | Play a rdr sound effect                                |
-| persist     | Determines if the user input value should persist when changing pages |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| label     | The text to display                                                                                                 |
+| start     | What boolean value to start at (true/false)                                                                         |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| sound     | Play a rdr sound effect                                                                                             |
+| persist   | Determines if the user input value should persist when changing pages                                               |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -353,9 +363,10 @@ end)
 
 ## Add Custom HTML to Page
 
-| Parameter | Description         |
-| --------- | ------------------- |
-| value     | The html to display |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| value     | The html to display                                                                                                 |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -374,14 +385,15 @@ MyFirstPage:RegisterElement("html", {
 
 ## Add Slider to Page
 
-| Parameter | Description                                            |
-| --------- | ------------------------------------------------------ |
-| total     | How many pages to show (display number) ex: 1/x        |
-| current   | What page number to show (display number) ex: x/3      |
-| slot      | There are 3 slots available, (header, content, footer) |
-| style     | CSS style overrides                                    |
-| sound     | Play a rdr sound effect                                |
-| persist     | Determines if the user input value should persist when changing pages |
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| total     | How many pages to show (display number) ex: 1/x                                                                     |
+| current   | What page number to show (display number) ex: x/3                                                                   |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| sound     | Play a rdr sound effect                                                                                             |
+| persist   | Determines if the user input value should persist when changing pages                                               |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -465,6 +477,15 @@ Example Usage:
 TextDisplay:update({
     value = "Hello World!",
     style = {}
+})
+```
+
+Eample 2 usage:
+
+> Override a value like a slider
+```lua
+SliderDisplay:update({
+    value = 1
 })
 ```
 
