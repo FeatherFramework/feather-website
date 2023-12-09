@@ -199,7 +199,7 @@ end)
 | slot        | There are 3 slots available, (header, content, footer)                                                              |
 | style       | CSS style overrides                                                                                                 |
 | rows        | How many rows for the areatext to take up                                                                           |
-| cols        | How many cols for the areatext to take up. If not set, it will default to 100% width (dynamic)                                                                           |
+| cols        | How many cols for the areatext to take up. If not set, it will default to 100% width (dynamic)                      |
 | resize      | Is the textarea resizable                                                                                           |
 | persist     | Determines if the user input value should persist when changing pages                                               |
 | id          | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
@@ -361,6 +361,72 @@ MyFirstPage:RegisterElement("toggle", {
 end)
 ```
 
+## Add Checkbox to Page
+
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| label     | The text to display                                                                                                 |
+| start     | What boolean value to start at (true/false)                                                                         |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| sound     | Play a rdr sound effect                                                                                             |
+| persist   | Determines if the user input value should persist when changing pages                                               |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
+
+Example Usage:
+
+```lua
+MyFirstPage:RegisterElement("checkbox", {
+    label = "Test",
+    start = true
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- }
+}, function(data)
+    print(data.value)
+end)
+```
+
+## Add GridSelector to Page
+
+| Parameter | Description                                                                                                         |
+| --------- | ------------------------------------------------------------------------------------------------------------------- |
+| leftlabel     | The text to display on the left side of the grid|
+| rightlabel     | The text to display on the right side of the grid|
+| toplabel     | The text to display on the top of the grid|
+| bottomlabel     | The text to display on the bottom of the grid|
+| maxy     | The Maximum number the grid can reach on the y axis |
+| maxx     | The Maximum number the grid can reach on the x axis |
+| arrowsteps     | The distance the circle moves when utilizing the arrow keys |
+| precision     | How many decimal places (example: 1 = 1.0, 2 = 1.00) |
+| slot      | There are 3 slots available, (header, content, footer)                                                              |
+| style     | CSS style overrides                                                                                                 |
+| sound     | Play a rdr sound effect                                                                                             |
+| persist   | Determines if the user input value should persist when changing pages                                               |
+| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
+
+Example Usage:
+
+```lua
+MyFirstPage:RegisterElement('gridslider', {
+    leftlabel = 'thin',
+    rightlabel = 'heavy',
+    toplabel = 'tall',
+    bottomlabel = 'short',
+    maxx = 1,
+    maxy = 1,
+    arrowsteps = 10,
+    precision = 1
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- }
+}, function(data)
+    print(TableToString(data.value)) -- Returns {x = 0, y = 0}
+end)
+```
+
 ## Add Custom HTML to Page
 
 | Parameter | Description                                                                                                         |
@@ -483,6 +549,7 @@ TextDisplay:update({
 Eample 2 usage:
 
 > Override a value like a slider
+
 ```lua
 SliderDisplay:update({
     value = 1
@@ -494,7 +561,7 @@ SliderDisplay:update({
 Example Usage:
 
 ```lua
-TextDisplay:unRegister()
+TextDisplay:UnRegister()
 ```
 
 ## Full three page Example
