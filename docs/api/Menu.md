@@ -66,6 +66,8 @@ local MyFirstPage = MyMenu:RegisterPage('first:page')
 
 ## Add Header to Page
 
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/b3d9f125-047a-4408-82b6-e6ca4f2ae5cb)
+
 ::: tip
 This element is what is draggable, without this element, you cannot drag a menu.
 :::
@@ -89,6 +91,8 @@ MyFirstPage:RegisterElement('header', {
 
 ## Add SubHeader to Page
 
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/a04bc28a-2742-4576-ade6-41e8aa5a8049)
+
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
 | value     | The text to display                                                                                                 |
@@ -108,6 +112,8 @@ MyFirstPage:RegisterElement('subheader', {
 
 ## Add Line to Page
 
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/8a5f0815-f920-4a84-bbc4-87181f1cba4c)
+
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
 | slot      | There are 3 slots available, (header, content, footer)                                                              |
@@ -125,6 +131,8 @@ MyFirstPage:RegisterElement('line', {
 
 ## Add BottomLine to Page
 
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/b011a362-fa10-42dc-9a7e-9d8cea56cf98)
+
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
 | slot      | There are 3 slots available, (header, content, footer)                                                              |
@@ -140,7 +148,8 @@ MyFirstPage:RegisterElement('bottomline', {
 })
 ```
 
-## Add TextView to Page
+## Add Test Display to Page
+
 
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -159,6 +168,8 @@ TextDisplay = MyFirstPage:RegisterElement('textdisplay', {
 ```
 
 ## Add Input to Page
+
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/22c2c9de-e6a5-44ca-ac96-882ca4a7992c)
 
 | Parameter   | Description                                                                                                         |
 | ----------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -191,6 +202,8 @@ end)
 ```
 
 ## Add TextArea to Page
+
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/d7026749-50dd-4b2e-882e-b10a820e65ad)
 
 | Parameter   | Description                                                                                                         |
 | ----------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -229,6 +242,8 @@ end)
 
 ## Add Button to Page
 
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/a361d4d2-21f3-43e9-b557-7963ee59db5f)
+
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
 | label     | The text to display                                                                                                 |
@@ -259,15 +274,17 @@ end)
 
 ## Add Arrows to Page
 
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/25f43ecf-80dd-4afe-8d41-81941c35cc02)
+
 | Parameter | Description                                                                                                                           |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | label     | The text to display                                                                                                                   |
 | start     | What index to default to display                                                                                                      |
 | options   | This is the options to select through, this can be a string or table. If its a table you must have "display" so that a value shows up |
 | slot      | There are 3 slots available, (header, content, footer)                                                                                |
 | style     | CSS style overrides                                                                                                                   |
 | sound     | Play a rdr sound effect                                                                                                               |
-| persist   | Determines if the user input value should persist when changing pages                                                                 |     |
+| persist   | Determines if the user input value should persist when changing pages                                                                 |
 
 Example Usage:
 
@@ -298,6 +315,8 @@ end)
 ```
 
 ## Add Slider to Page
+
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/9f29001b-9a2e-44ec-bc69-fad28158a193)
 
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -334,6 +353,8 @@ end)
 
 ## Add Toggle to Page
 
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/9ea6e0c2-ec8c-4ed5-8a18-6085763b2523)
+
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
 | label     | The text to display                                                                                                 |
@@ -363,6 +384,8 @@ end)
 
 ## Add Checkbox to Page
 
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/436f9739-bb5d-4c04-b029-19e61257a38d)
+
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
 | label     | The text to display                                                                                                 |
@@ -389,6 +412,8 @@ end)
 ```
 
 ## Add GridSelector to Page
+
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/5dd4713c-8d9d-4a1d-a198-027c6d0c45bc)
 
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -428,6 +453,8 @@ end)
 ```
 
 ## Add Custom HTML to Page
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/ff2f5be7-909d-4c9e-abda-fde2d2cb3d2f)
+
 
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -449,7 +476,9 @@ MyFirstPage:RegisterElement("html", {
 })
 ```
 
-## Add Slider to Page
+## Add Page Arrows to Page
+
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/541c7387-2517-4ecf-a8b3-d4d8314f9046)
 
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
