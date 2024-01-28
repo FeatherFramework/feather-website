@@ -22,6 +22,7 @@ FeatherMenu =  exports['feather-menu'].initiate()
 | contentslot.style | CSS style overrides for the content slot |
 | draggable         | If the window can be dragged             |
 | canclose          | If the user can close the menu with "X"  |
+| callbacks         | open/close/topage callbacks              |
 
 Example Usage:
 
@@ -47,6 +48,16 @@ local MyMenu = FeatherMenu:RegisterMenu('feather:character:menu', {
     },
     draggable = true,
     --canclose = false
+}, {
+    opened = function()
+        print("MENU OPENED!")
+    end,
+    closed = function()
+        print("MENU CLOSED!")
+    end,
+    topage = function(data)
+        print("PAGE CHANGED ", data.pageid)
+    end
 })
 ```
 
@@ -562,6 +573,32 @@ Example Usage:
 
 ```lua
 TextDisplay:UnRegister()
+```
+
+## Events
+
+### Opened Menu
+
+```lua
+RegisterNetEvent('FeatherMenu:opened', function(menudata)
+  print("MENU OPENED", menudata.menuid)
+end)
+```
+
+### Closed Menu
+
+```lua
+RegisterNetEvent('FeatherMenu:closed', function(menudata)
+  print("MENU CLOSED", menudata.menuid)
+end)
+```
+
+### Page Routed
+
+```lua
+RegisterNetEvent('FeatherMenu:Page:RoutedTo', function(menudata)
+  print("MENU OPENED", menudata.menuid, menudata.pageid)
+end)
 ```
 
 ## Full three page Example
