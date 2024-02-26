@@ -9,5 +9,8 @@ var options = {
 };
 
 export default defineConfig({
+    sitemap: {
+      hostname: 'https://featherframework.net'
+    },
     plugins: [SearchPlugin(options)],
 })

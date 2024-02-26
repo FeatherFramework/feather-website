@@ -31,6 +31,7 @@ export default {
     nav: [
       { text: "Setup Guide", link: "/guide" },
       { text: "Docs", link: "/api" },
+      { text: "Roadmap", link: "/roadmap" },
       { text: "Team", link: "/team" },
     ],
     socialLinks: [
