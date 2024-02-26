@@ -128,7 +128,7 @@ const roadmap = [
     },
     {
         circle: "May",
-        title: 'April 2024',
+        title: 'May 2024',
         objectives: [
             {
                 icon: 'milestone',
@@ -152,27 +152,27 @@ const roadmap = [
     },
     {
         circle: "Jun",
-        title: 'April 2024',
+        title: 'June 2024',
         objectives: []
     },
     {
         circle: "Jul",
-        title: 'April 2024',
+        title: 'July 2024',
         objectives: []
     },
     {
         circle: "Aug",
-        title: 'April 2024',
+        title: 'August 2024',
         objectives: []
     },
     {
         circle: "Sep",
-        title: 'April 2024',
+        title: 'September 2024',
         objectives: []
     },
     {
         circle: "Oct",
-        title: 'April 2024',
+        title: 'October 2024',
         objectives: [
             {
                 icon:  'default',
@@ -182,13 +182,13 @@ const roadmap = [
     },
     {
         circle: "Nov",
-        title: 'April 2024',
+        title: 'November 2024',
         objectives: [
         ]
     },
     {
         circle: "Dec",
-        title: 'April 2024',
+        title: 'December 2024',
         objectives: [
             {
                 icon:  'default',
