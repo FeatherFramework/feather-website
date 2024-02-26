@@ -63,10 +63,6 @@ const roadmap = [
         title: 'February 2024',
         objectives: [
             {
-                icon: 'milestone',
-                header: 'Feather Menu Exits Beta'
-            },
-            {
                 icon:  'default',
                 header: 'Feather Character Continues Development'
             },
