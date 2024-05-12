@@ -76,13 +76,55 @@ const roadmap = [
         circle: "Mar",
         title: 'March 2024',
         objectives: [
+             {
+                icon:  'default',
+                header: 'Feather Character Continues Development'
+            },
+            {
+                icon:  'default',
+                header: 'Feather Inventory Continues Development'
+            }
+        ]
+    },
+    {
+        circle: "Apr",
+        title: 'April 2024',
+        objectives: [
+            {
+                icon:  'default',
+                header: 'Feather Character Continues Development'
+            },
+            {
+                icon:  'default',
+                header: 'Feather Inventory Continues Development'
+            }
+        ]
+    },
+    {
+        circle: "May",
+        title: 'May 2024',
+        objectives: [
             {
                 icon:  'start',
                 header: 'Feather Weapons begins development'
             },
             {
+                icon:  'default',
+                header: 'Feather Character Continues Development'
+            },
+            {
+                icon:  'default',
+                header: 'Feather Inventory Continues Development'
+            }
+        ]
+    },
+    {
+        circle: "Jun",
+        title: 'June 2024',
+        objectives: [
+            {
                 icon: 'milestone',
-                header: 'Releases to Alpha',
+                 header: 'Releases to Alpha',
                 sub_objects: [
                     {
                         icon:  'default',
@@ -101,9 +143,28 @@ const roadmap = [
         ]
     },
     {
-        circle: "Apr",
-        title: 'April 2024',
+        circle: "Jul",
+        title: 'July 2024',
         objectives: [
+            {
+                
+                icon: 'milestone',
+                header: 'Feather Menu 2.0',
+                sub_objects: [
+                    {
+                        icon:  'default',
+                        header: 'Combine feather-progressbars into Feather Menu'
+                    },
+                    {
+                        icon:  'default',
+                        header: 'Custom Fonts'
+                    },
+                    {
+                        icon:  'default',
+                        header: 'Custom Themes'
+                    }
+                ]
+            },
             {
                 icon: 'milestone',
                 header: 'Feather Framework enters Beta and releases to the public!'
@@ -121,40 +182,6 @@ const roadmap = [
                 header: 'Create new Feather + BCC recipe'
             }
         ]
-    },
-    {
-        circle: "May",
-        title: 'May 2024',
-        objectives: [
-            {
-                icon: 'milestone',
-                header: 'Feather Menu 2.0',
-                sub_objects: [
-                    {
-                        icon:  'default',
-                        header: 'Combine feather-progressbars into Feather Menu'
-                    },
-                    {
-                        icon:  'default',
-                        header: 'Custom Fonts'
-                    },
-                    {
-                        icon:  'default',
-                        header: 'Custom Themes'
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        circle: "Jun",
-        title: 'June 2024',
-        objectives: []
-    },
-    {
-        circle: "Jul",
-        title: 'July 2024',
-        objectives: []
     },
     {
         circle: "Aug",
