@@ -36,7 +36,7 @@ export default {
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/FeatherFramework" },
-      { icon: "discord", link: "https://discord.gg/GuwS7Y7PA3" },
+      { icon: "discord", link: "https://discord.gg/zBCPbPJGZw" },
     ],
     sidebar: {
       "/api/": getSidebar({
