@@ -12,14 +12,14 @@ Register a callback that will be triggered whenever an in-game client event trig
 | eventname | name of the event to watch/listen to                |
 | callback  | fucntion to be triggered when an event is triggered |
 
-`FeatherCore.Events:RegisterEventListener(eventname, callback)`
+`FeatherCore.EventsAPI:RegisterEventListener(eventname, callback)`
 
 Example Usage:
 
 ```lua
 -- Client
-Citizen.CreateThread(function()
-    FeatherCore.Events:RegisterEventListener('EVENT_PICKUP_CARRIABLE', function(args)
+CreateThread(function()
+    FeatherCore.EventsAPI:RegisterEventListener('EVENT_PICKUP_CARRIABLE', function(args)
         print("EVENT TRIGGERED: EVENT_PICKUP_CARRIABLE", args[1], args[2])
     end)
 end)
@@ -34,21 +34,21 @@ Removes an event from the listener queue, listener will no longer listen once re
 | --------- | ----------------------------------------- |
 | listener  | object returns from RegisterEventListener |
 
-`FeatherCore.Events:RenoveEventListener(listener)`
+`FeatherCore.EventsAPI:RenoveEventListener(listener)`
 
 Example Usage:
 
 ```lua
 -- Client
-Citizen.CreateThread(function()
-    local listener = FeatherCore.Events:RegisterEventListener('EVENT_PICKUP_CARRIABLE', function(args)
+CreateThread(function()
+    local listener = FeatherCore.EventsAPI:RegisterEventListener('EVENT_PICKUP_CARRIABLE', function(args)
         print("EVENT TRIGGERED: EVENT_PICKUP_CARRIABLE", args[1], args[2])
     end)
 
 
     Wait(40000)
 
-    FeatherCore.Events:RenoveEventListener(listener)
+    FeatherCore.EventsAPI:RenoveEventListener(listener)
 end)
 ```
 
@@ -63,14 +63,14 @@ This provides the ability to print every in-game event for development purpose.
 | state     | object returns from RegisterEventListener                                                   |
 | type      | (optional, will default to all) the type of event to listen too (entities, network, or all) |
 
-`FeatherCore.Events:DevMode(listener)`
+`FeatherCore.EventsAPI:DevMode(listener)`
 
 Example Usage:
 
 ```lua
 -- Client
-Citizen.CreateThread(function()
-    FeatherCore.Events:DevMode(true, 'entities')
-    --  FeatherCore.Events:DevMode(true, 'network')
+CreateThread(function()
+    FeatherCore.EventsAPI:DevMode(true, 'entities')
+    --  FeatherCore.EventsAPI:DevMode(true, 'network')
 end)
 ```

@@ -21,7 +21,7 @@ Example Usage:
 
 ```lua
 
-Citizen.CreateThread(function()
+CreateThread(function()
 
     local  blip = FeatherCore.Blip:SetBlip('Gift', 'blip_special_series_1', 0.2, x, y, z, vector3 or nil)
 end)
@@ -33,7 +33,7 @@ end)
 If you want to use any natives that are not yet included, you can utilize the raw blip.
 
 ```lua
-Citizen.CreateThread(function()
+CreateThread(function()
     local  blip = FeatherCore.Blip:SetBlip('Gift', 'blip_special_series_1', 0.2, x, y, z,vector3 or nil)
 
     local rawblip = blip.rawblip
@@ -50,7 +50,7 @@ end)
 Delete a marker (blip) on the players map
 
 ```lua
-Citizen.CreateThread(function()
+CreateThread(function()
     local  blip = FeatherCore.Blip:SetBlip('Gift', 'blip_special_series_1', 0.2, x, y, z,vecotr3 or nil)
 
     blip:Remove()
@@ -73,7 +73,7 @@ Example Usage:
 
 ```lua
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local  blip = FeatherCore.Blip:SetBlip('Gift', 'blip_special_series_1', 0.2, x, y, z,vector3 or nil)
 
     blip:AddRadius(64.0, -1282792512)

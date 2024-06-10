@@ -35,7 +35,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -62,7 +62,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -91,7 +91,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -120,7 +120,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -149,7 +149,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -178,7 +178,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -207,7 +207,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -236,7 +236,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -265,7 +265,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -291,7 +291,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -317,7 +317,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -351,7 +351,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -381,7 +381,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -412,7 +412,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -447,7 +447,7 @@ Example Usage:
 ```lua
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -477,7 +477,7 @@ Example Usage:
 ```lua
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -508,7 +508,7 @@ Example Usage:
 ```lua
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -539,7 +539,7 @@ Example Usage:
 ```lua
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -563,7 +563,7 @@ Example Usage:
 ```lua
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -592,7 +592,7 @@ Example Usage:
 ```lua
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -616,7 +616,7 @@ Example Usage:
 ```lua
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
@@ -640,7 +640,7 @@ Example Usage:
 ```lua
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local coords = {
         z = 118.38395690917968, y = 802.531982421875, x = -279.46728515625
     }
