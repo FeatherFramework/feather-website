@@ -15,7 +15,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local file = FeatherCore.Files:Open(GetCurrentResourceName(), 'data.txt')
 end)
 ```
@@ -37,7 +37,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local file = FeatherCore.Files:Open(GetCurrentResourceName(), 'data.txt')
     local filedata = file:Read()
 end)
@@ -61,7 +61,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local file = FeatherCore.Files:Open(GetCurrentResourceName(), 'data.txt')
     local filedata = file:Read()
 
@@ -89,7 +89,7 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local file = FeatherCore.Files:Open(GetCurrentResourceName(), 'data.txt')
     file:Update("Some Awesome stuff!")
 end)
@@ -119,7 +119,7 @@ Example Usage:
 
 
 -- Lazy functions, not as optimized
-Citizen.CreateThread(function()
+CreateThread(function()
     local file = FeatherCore.Files:Load(GetCurrentResourceName(), 'data.txt')
 end)
 ```
@@ -144,7 +144,7 @@ Example Usage:
 
 
 -- Lazy functions, not as optimized
-Citizen.CreateThread(function()
+CreateThread(function()
     FeatherCore.Files:Save(GetCurrentResourceName(), 'data.txt', "Some cool stuff!")
 end)
 ```
@@ -169,7 +169,7 @@ Example Usage:
 
 
 -- Lazy functions, not as optimized
-Citizen.CreateThread(function()
+CreateThread(function()
     FeatherCore.Files:Update(GetCurrentResourceName(), 'data.txt', "Some cool stuff!")
 end)
 ```

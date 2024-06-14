@@ -49,7 +49,7 @@ end)
 
 ## Call RPC with async.
 
-Calls remote method asynchronously. Can only be used inside `Citizen.CreateThread`.
+Calls remote method asynchronously. Can only be used inside `CreateThread`.
 
 > FeatherCore.RPC.CallAsync(name, params [, player])
 
@@ -59,7 +59,7 @@ Calls remote method asynchronously. Can only be used inside `Citizen.CreateThrea
 - returns `result<any>` - any data returned by remote method
 
 ```lua
-Citizen.CreateThread(function ()
+CreateThread(function ()
     -- Some params passed to server-side method
     local result = FeatherCore.RPC.CallAsync("doSomethingRemote", {
         text = "World",

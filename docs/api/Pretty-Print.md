@@ -10,7 +10,7 @@ Feather provides an enhanced `print` functionality to the default Lua.
 ## Setup
 
 ```lua
-Citizen.CreateThread(function()
+CreateThread(function()
     --Use print as you normally would.
     FeatherCore.Print('%{bold} %{red}TEST', {
         hello = "world"

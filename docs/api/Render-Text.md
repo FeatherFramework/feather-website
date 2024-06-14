@@ -77,9 +77,9 @@ Example Usage:
 
 ```lua
 
-Citizen.CreateThread(function()
+CreateThread(function()
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
         local onScreen, _x, _y = GetScreenCoordFromWorldCoord(GetEntityCoords(PlayerPedId()))
 
         if onScreen then
@@ -108,9 +108,9 @@ Example Usage:
 
 ```lua
 
-Citizen.CreateThread(function()
+CreateThread(function()
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
         local onScreen, _x, _y = GetScreenCoordFromWorldCoord(GetEntityCoords(PlayerPedId()))
 
         if onScreen then
@@ -146,9 +146,9 @@ Example Usage:
 
 ```lua
 
-Citizen.CreateThread(function()
+CreateThread(function()
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
         FeatherCore.Render:DrawMarker(0x50638AB9, GetEntityCoords(PlayerPedId()), vector3(0.0, 0.0, 0.0), vector3(0.0, 0.0, 0.0), vecotr3(0.15, 0.15, 0.15), {r: 255, g: 0, b: 0, a: 255}, false, false, false, false)
     end
 end)
@@ -175,9 +175,9 @@ Example Usage:
 
 ```lua
 
-Citizen.CreateThread(function()
+CreateThread(function()
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
         local onScreen, _x, _y = GetScreenCoordFromWorldCoord(GetEntityCoords(PlayerPedId()))
 
         if onScreen then
@@ -211,9 +211,9 @@ Example Usage:
 
 ```lua
 
-Citizen.CreateThread(function()
+CreateThread(function()
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
         local playerCoords = GetEntityCoords(PlayerPedId())
         FeatherCore.Render.Draw3DText(vector3(x, y, z), 'This will show at the coords', 0.2)
     end

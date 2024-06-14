@@ -13,7 +13,7 @@ This sets up the Prompt Group, which will allow you to attach future prompts to 
 ```lua
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
 	local  PromptGroup = FeatherCore.Prompt:SetupPromptGroup() --Setup Prompt Group
 
     -- Optional: Setting the Prompt Group for entities. (Used for prompts when targeting)
@@ -55,13 +55,13 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
 	local PromptGroup = FeatherCore.Prompt:SetupPromptGroup() --Setup Prompt Group
 
 	local firstprompt = PromptGroup:RegisterPrompt("Press Me", 0x4CC0E2FE, 1, 1, true, 'hold', {timedeventhash = "MEDIUM_TIMED_EVENT"}) --Register your first prompt
 
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
     end
 end)
 ```
@@ -84,13 +84,13 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
 	local PromptGroup = FeatherCore.Prompt:SetupPromptGroup() --Setup Prompt Group
 
 	local firstprompt = PromptGroup:RegisterPrompt("Press Me", 0x4CC0E2FE, 1, 1, true, 'hold', {timedeventhash = "MEDIUM_TIMED_EVENT"}) --Register your first prompt
 
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
 		PromptGroup:ShowGroup("My first prompt group") --Show your prompt group
     end
 end)
@@ -114,13 +114,13 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
 	local  PromptGroup = FeatherCore.Prompt:SetupPromptGroup() --Setup Prompt Group
 
 	local firstprompt = PromptGroup:RegisterPrompt("Press Me", 0x4CC0E2FE, 1, 1, true, 'hold', {timedeventhash = "MEDIUM_TIMED_EVENT"}) --Register your first prompt
 
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
 
         --Show your prompt group
 		PromptGroup:ShowGroup("My first prompt group")
@@ -151,13 +151,13 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
 	local  PromptGroup = FeatherCore.Prompt:SetupPromptGroup() --Setup Prompt Group
 
 	local firstprompt = PromptGroup:RegisterPrompt("Press Me", 0x4CC0E2FE, 1, 1, true, 'hold', {timedeventhash = "MEDIUM_TIMED_EVENT"}) --Register your first prompt
 
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
 
         --Show your prompt group
 		PromptGroup:ShowGroup("My first prompt group")
@@ -188,13 +188,13 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
 	local  PromptGroup = FeatherCore.Prompt:SetupPromptGroup() --Setup Prompt Group
 
 	local firstprompt = PromptGroup:RegisterPrompt("Press Me", 0x4CC0E2FE, 1, 1, true, 'hold', {timedeventhash = "MEDIUM_TIMED_EVENT"}) --Register your first prompt
 
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
 
         --Show your prompt group
 		PromptGroup:ShowGroup("My first prompt group")
@@ -224,13 +224,13 @@ Example Usage:
 
 
 
-Citizen.CreateThread(function()
+CreateThread(function()
 	local  PromptGroup = FeatherCore.Prompt:SetupPromptGroup() --Setup Prompt Group
 
 	local firstprompt = PromptGroup:RegisterPrompt("Press Me", 0x4CC0E2FE, 1, 1, true, 'hold', {timedeventhash = "MEDIUM_TIMED_EVENT"}) --Register your first prompt
 
     while  true  do
-        Citizen.Wait(0)
+        Wait(0)
 
         --Show your prompt group
 		PromptGroup:ShowGroup("My first prompt group")

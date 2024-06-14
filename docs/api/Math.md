@@ -13,7 +13,7 @@ Example Usage:
 
 ```lua
 -- Client
-Citizen.CreateThread(function()
+CreateThread(function()
     FeatherCore.Math.GetDistanceBetween(vector3(0, 0, 0), vector3(1, 1, 1))
 end)
 ```
