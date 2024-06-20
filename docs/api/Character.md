@@ -40,70 +40,91 @@ Example Usage:
 FeatherCore.Character.InitiateCharacter(src, 1)
 ```
 
-### Get All Available
+### Get All Available Characters from DataBase
 ```lua
 FeatherCore.Character.GetAvailableCharactersFromDB(src)
 ```
 
-### Get Character by src
+or
 
 ```lua
-FeatherCore.Character.GetCharacterBySrc(src)
+FeatherCore.Character.GetAllCharacters(src)
 ```
 
-### Get Character by ID
+### Get Character
+
+#### By Source
 
 ```lua
-FeatherCore.Character.GetCharacterByID(charid)
+FeatherCore.Character.GetCharacter({ src = src })
+```
+
+#### By Character ID
+
+```lua
+FeatherCore.Character.GetCharacterByID({ id = charid })
 ```
 
 ### Remove Character (despawn)
 
 ```lua
-FeatherCore.Character.RemoveCharacter(src)
+local player = FeatherCore.Character.GetCharacter({ src = src })
+player:RemoveCharacter()
+```
+
+### Get Character Data
+```lua
+local player = FeatherCore.Character.GetCharacterByID({ id = charid })
+local character = player.char
+
+print(character.xp)
 ```
 
 ### Update Character Field
 |Parameter| Description|
 |--|--|
-| src | character source |
 | key | the key to change in the cache/db |
 | value | the value to update the key with |
 
-`FeatherCore.Character.UpdateAttribute(src, key, val)` 
+`player:UpdateAttribute(key, val)` 
   
 Example Usage:
 ```lua
-FeatherCore.Character.UpdateAttribute(src, 'lang', 'en_us')
+local player = FeatherCore.Character.GetCharacter({ src = src })
+player:UpdateAttribute('lang', 'en_us')
 ```
 
 ### Add to character field
 |Parameter| Description|
 |--|--|
-| src | character source |
 | key | the key to change (dollars, gold, xp, tokens) |
 | amount | float/int, how much to add |
 
-`FeatherCore.Character.Add(src, key, amount)` 
+`player:Add(key, amount)` 
   
 Example Usage:
 ```lua
-FeatherCore.Character.Add(src, 'dollars', 10)
+local player = FeatherCore.Character.GetCharacter({ src = src })
+player:Add('dollars', 10)
 ```
 
 ### Subtract from character field
 |Parameter| Description|
 |--|--|
-| src | character source |
 | key | the key to change (dollars, gold, xp, tokens) |
 | amount | float/int, how much to subtract |
 
-`FeatherCore.Character.Subtract(src, key, amount)` 
+`player:Subtract(src, key, amount)` 
   
 Example Usage:
 ```lua
-FeatherCore.Character.Subtract(src, 'dollars', 5)
+local player = FeatherCore.Character.GetCharacter({ src = src })
+player:Subtract('dollars', 5)
 ```
 
-## Character API
-TBD
+### Logout
+
+```lua
+local player = FeatherCore.Character.GetCharacter({ src = src })
+player:Logout()
+```
