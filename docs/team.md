@@ -72,7 +72,8 @@ const developers = [
         ]
     }
 ]
-const Staff = [
+
+const staff = [
   
     {
         avatar: 'https://avatars.githubusercontent.com/u/37031311?s=96&v=4',
