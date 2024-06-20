@@ -39,35 +39,28 @@ const developers = [
     {
         avatar: 'https://avatars.githubusercontent.com/u/10902965?v=4',
         name: 'Bytesizd',
-        title: 'Lead Developer',
+        title: 'Lead Developer/Founder',
         links: [
           { icon: 'github', link: 'https://github.com/andrewr3k' },
-          { icon: 'youtube', link: 'https://www.youtube.com/channel/UCmuccaVOwak0R3m0q9dyodA' }
-        ]
-    },
-    {
-        avatar: 'https://avatars.githubusercontent.com/u/47730893?s=96&v=4',
-        name: 'SavSin',
-        title: 'Senior Developer',
-        links: [
-          { icon: 'github', link: 'https://github.com/DavFount' }
+          { icon: 'youtube', link: 'https://www.youtube.com/channel/UCmuccaVOwak0R3m0q9dyodA' },
+          { icon: 'twitch', link: 'https://www.twitch.tv/bytesizd' }
         ]
     },
     {
         avatar: 'https://avatars.githubusercontent.com/u/119366047?v=4',
         name: 'Jake2k4',
-        title: 'Developer',
+        title: 'Developer/Project Manager',
         links: [
           { icon: 'github', link: 'https://github.com/jakeyboi1' },
           { icon: 'youtube', link: 'https://youtube.com/@Jake2k4-id9ym' }
         ]
     },
     {
-        avatar: 'https://avatars.githubusercontent.com/u/37031311?s=96&v=4',
-        name: 'Apollyon',
+        avatar: 'https://avatars.githubusercontent.com/u/47730893?s=96&v=4',
+        name: 'SavSin',
         title: 'Developer',
         links: [
-          { icon: 'github', link: 'https://github.com/JusCampin' }
+          { icon: 'github', link: 'https://github.com/DavFount' }
         ]
     },
     {
@@ -77,21 +70,40 @@ const developers = [
         links: [
           { icon: 'github', link: 'https://github.com/BurntJannings' }
         ]
+    }
+]
+const Staff = [
+  
+    {
+        avatar: 'https://avatars.githubusercontent.com/u/37031311?s=96&v=4',
+        name: 'Apollyon',
+        title: 'Staff',
+        links: [
+          { icon: 'github', link: 'https://github.com/JusCampin' }
+        ]
     },
     {
         avatar: 'https://avatars.githubusercontent.com/u/9192488?v=4',
         name: 'Elzetia',
-        title: 'Developer',
+        title: 'Staff',
         links: [
           { icon: 'github', link: 'https://github.com/elzetia' }
         ]
-    }
-]
-const designers = [
+    },
     {
-        avatar: 'https://cdn.discordapp.com/attachments/1032364319633063938/1121850274278031451/Lady_Grey_character_portrait_strawberry_blonde_woman_smoking_ba_62316436-149c-48b3-835d-805edd5b4b9e.PNG',
-        name: 'Lady Grey',
-        title: 'Lead Designer'
+        avatar: 'https://avatars.githubusercontent.com/u/92045818?v=4',
+        name: 'Fistsoffury',
+        title: 'Staff',
+        links: [
+          { icon: 'github', link: 'https://github.com/Fistsofury' }
+        ]
+    },
+    {
+        avatar: 'https://cdn.discordapp.com/avatars/1011606164489904209/c28b4baa853642c3fe2b82c3414b8298.webp?size=128',
+        name: 'Charlie',
+        title: 'Staff',
+        links: [
+        ]
     }
 ]
 </script>
@@ -109,10 +121,10 @@ const designers = [
     </template>
   </VPTeamPageSection>
   <VPTeamPageSection>
-    <template #title>Designers</template>
+    <template #title>Staff</template>
     <template #lead></template>
     <template #members>
-      <VPTeamMembers size="medium" :members="designers" />
+      <VPTeamMembers size="medium" :members="staff" />
     </template>
   </VPTeamPageSection>
 </VPTeamPage>
