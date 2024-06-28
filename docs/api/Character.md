@@ -2,6 +2,19 @@
 
 ## Core API <Badge type="tip" text="Server Side Only" />
 
+### Detect when a character/player has spawned
+Feather core sends a server and client event as soon as the player is loaded/spawned into the world.
+
+Event: `Feather:Character:Spawned`
+
+Example Usage:
+```lua
+RegisterNetEvent("Feather:Character:Spawned", function(character)
+    -- character param is the character object (x, y, z, etc)
+    -- Do something here now that the character is spawned
+end)
+```
+
 ### Create Character
 Create a character in DB
 |Parameter| Description|
