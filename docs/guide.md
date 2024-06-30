@@ -39,6 +39,8 @@ head:
 - Must have "Latest Recommended" txAdmin build artifact
 	- [Windows](http://runtime.fivem.net/artifacts/fivem/build_server_windows/master/) 
 	- [Linux](http://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/)
+- MariaDB version 10.7+
+  - DO NOT use XAMPP, this has known vulnerabilities when hosted on windows and is shipped with a very old version of mariadb/mysql
 
 ### Installation Tutorial
 
