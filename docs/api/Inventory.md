@@ -123,13 +123,13 @@ Example Usage:
 
 ```lua
 -- Add 6 apples to my inventory
-Feather.Inventory.AddItem('item_apple', 6, nil, 'c770bc77-3a77-11ee-b67f-18c04d04db03')
+Feather.Items.AddItem('item_apple', 6, nil, 'c770bc77-3a77-11ee-b67f-18c04d04db03')
 
 local metadata = { quality = 'poor', durability = 50, maxDurability = 100 }
-Feather.Inventory.AddItem('item_apple', 6, metadata, 'c770bc77-3a77-11ee-b67f-18c04d04db03')
+Feather.Items.AddItem('item_apple', 6, metadata, 'c770bc77-3a77-11ee-b67f-18c04d04db03')
 
 -- This adds to the active players inventory
-Feather.Inventory.AddItem('item_apple', 6, nil, src)
+Feather.Items.AddItem('item_apple', 6, nil, src)
 ```
 
 ## Remove Item By Name
@@ -147,7 +147,7 @@ Remove an item from a given inventory by name.
 Example Usage:
 
 ```lua
-Feather.Inventory.RemoveItemByName('item_apple', 6)
+Feather.Items.RemoveItemByName('item_apple', 6)
 ```
 
 ## Remove Item By ID
@@ -163,7 +163,7 @@ Remove an item by its inventory ID. Only supports a single item as its targeting
 Example Usage:
 
 ```lua
-Feather.Inventory.RemoveItemById(6)
+Feather.Items.RemoveItemById(6)
 ```
 
 ## Set Metadata
@@ -186,7 +186,7 @@ local metadata = {
   durability = 50,
   maxDurability = 100
 }
-Feather.Inventory.SetMetadata(6, metadata)
+Feather.Items.SetMetadata(6, metadata)
 ```
 
 ## Get Item
@@ -202,7 +202,7 @@ Gets an item from the Inventory Items Table
 Example Usage:
 
 ```lua
-Feather.Inventory.GetItem(6)
+Feather.Items.GetItem(6)
 ```
 
 ## GetItemCount
@@ -219,7 +219,7 @@ Retrieves the amount of a specific item a player has. Returns the quantity.
 Example Usage:
 
 ```lua
-Feather.Inventory.GetItemCount('item_train_ticket', 'c770bc77-3a77-11ee-b67f-18c04d04db03')
+Feather.Items.GetItemCount('item_train_ticket', 'c770bc77-3a77-11ee-b67f-18c04d04db03')
 ```
 
 ## Item Exists
@@ -235,7 +235,7 @@ Checks if an item exists in the DB.
 Example Usage:
 
 ```lua
-Feather.Inventory.ItemExists('item_train_ticket')
+Feather.Items.ItemExists('item_train_ticket')
 ```
 
 ## Inventory Has Item
@@ -281,7 +281,7 @@ Example Usage:
 
 ```lua
 
-Feather.Inventory.RegisterUsableItem('item_apple', function (item)
+Feather.Items.RegisterUsableItem('item_apple', function (item) -- Item stores the database entry for the item
   print('You ate an apple!')
 end)
 ```
