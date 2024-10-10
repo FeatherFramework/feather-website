@@ -325,6 +325,40 @@ Example Usage:
 end)
 ```
 
+## Add Dropdown Selector to Page
+
+| Parameter | Description                                                                                                                           |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| label     | The text to display                                                                                                                   |
+| options   | This is the options to select through, this can be a string or table. If its a table you must have "text" so that a value shows up    |
+| slot      | There are 3 slots available, (header, content, footer)                                                                                |
+| style     | CSS style overrides                                                                                                                   |
+| sound     | Play a rdr sound effect                                                                                                               |
+
+Example Usage:
+
+```lua
+ MyFirstPage:RegisterElement('dropdown', {
+    label = 'Select a color',
+    slot = "content",
+    options = {
+        { text = "Black", value = "data" },
+        { text = "Brown", value = "data"},
+        { text = "Blonde", value = "data"},
+        { text = "Red", value = "data"},
+        { text = "Silver", value = "data"},
+        { text = "White", value = "data"}
+    },
+    -- sound = {
+    --     action = "SELECT",
+    --     soundset = "RDRO_Character_Creator_Sounds"
+    -- },
+}, function(data)
+    -- This gets triggered whenever the dropdown selected value changes
+    print(TableToString(data.value))
+end)
+```
+
 ## Add Slider to Page
 
 ![image](https://github.com/FeatherFramework/feather-website/assets/10902965/9f29001b-9a2e-44ec-bc69-fad28158a193)
