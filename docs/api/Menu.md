@@ -22,6 +22,7 @@ FeatherMenu =  exports['feather-menu'].initiate()
 | contentslot.style | CSS style overrides for the content slot |
 | draggable         | If the window can be dragged             |
 | canclose          | If the user can close the menu with "X"  |
+| keyclicks         | A key:Value list for keyclick callbacks  |
 | callbacks         | open/close/topage callbacks              |
 
 Example Usage:
@@ -47,7 +48,15 @@ local MyMenu = FeatherMenu:RegisterMenu('feather:character:menu', {
         }
     },
     draggable = true,
-    --canclose = false
+    --canclose = false,
+    keyclicks = { -- You can use https://tqlbox.com/key-codes to find the "key" values
+        ['Backspace'] = function()
+            print("Backspace clicked!")
+        end,
+        ['Delete'] = function()
+            print("Delete clicked!")
+        end
+    }
 }, {
     opened = function()
         print("MENU OPENED!")
