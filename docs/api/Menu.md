@@ -18,6 +18,7 @@ FeatherMenu =  exports['feather-menu'].initiate()
 | 1080width         | Width of the menu on a 1080p window      |
 | 2kwidth           | Width of the menu on a 2k window         |
 | 4kwidth           | Width of the menu on a 4k window         |
+| font              | custom font support                      |
 | style             | CSS style overrides                      |
 | contentslot.style | CSS style overrides for the content slot |
 | draggable         | If the window can be dragged             |
@@ -40,6 +41,15 @@ local MyMenu = FeatherMenu:RegisterMenu('feather:character:menu', {
         -- ['border'] = '5px solid white',
         -- ['background-image'] = 'none',
         -- ['background-color'] = '#515A5A'
+    },
+    font = {
+        -- Font cdn url
+        -- url = 'https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap',
+        -- fontFamily = 'Jaro',
+
+        -- Nui file path
+        -- nuiUrl = 'nui://feather-core/ui/fonts/chinese-rocks.90c60ebd.ttf',
+        -- fontFamily = 'chineserock'
     },
     contentslot = {
         style = { --This style is what is currently making the content slot scoped and scrollable. If you delete this, it will make the content height dynamic to its inner content.
@@ -169,7 +179,6 @@ MyFirstPage:RegisterElement('bottomline', {
 ```
 
 ## Add Test Display to Page
-
 
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -336,13 +345,13 @@ end)
 
 ## Add Dropdown Selector to Page
 
-| Parameter | Description                                                                                                                           |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| label     | The text to display                                                                                                                   |
-| options   | This is the options to select through, this can be a string or table. If its a table you must have "text" so that a value shows up    |
-| slot      | There are 3 slots available, (header, content, footer)                                                                                |
-| style     | CSS style overrides                                                                                                                   |
-| sound     | Play a rdr sound effect                                                                                                               |
+| Parameter | Description                                                                                                                        |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| label     | The text to display                                                                                                                |
+| options   | This is the options to select through, this can be a string or table. If its a table you must have "text" so that a value shows up |
+| slot      | There are 3 slots available, (header, content, footer)                                                                             |
+| style     | CSS style overrides                                                                                                                |
+| sound     | Play a rdr sound effect                                                                                                            |
 
 Example Usage:
 
@@ -469,21 +478,21 @@ end)
 
 ![image](https://github.com/FeatherFramework/feather-website/assets/10902965/5dd4713c-8d9d-4a1d-a198-027c6d0c45bc)
 
-| Parameter | Description                                                                                                         |
-| --------- | ------------------------------------------------------------------------------------------------------------------- |
-| leftlabel     | The text to display on the left side of the grid|
-| rightlabel     | The text to display on the right side of the grid|
-| toplabel     | The text to display on the top of the grid|
-| bottomlabel     | The text to display on the bottom of the grid|
-| maxy     | The Maximum number the grid can reach on the y axis |
-| maxx     | The Maximum number the grid can reach on the x axis |
-| arrowsteps     | The distance the circle moves when utilizing the arrow keys |
-| precision     | How many decimal places (example: 1 = 1.0, 2 = 1.00) |
-| slot      | There are 3 slots available, (header, content, footer)                                                              |
-| style     | CSS style overrides                                                                                                 |
-| sound     | Play a rdr sound effect                                                                                             |
-| persist   | Determines if the user input value should persist when changing pages                                               |
-| id        | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
+| Parameter   | Description                                                                                                         |
+| ----------- | ------------------------------------------------------------------------------------------------------------------- |
+| leftlabel   | The text to display on the left side of the grid                                                                    |
+| rightlabel  | The text to display on the right side of the grid                                                                   |
+| toplabel    | The text to display on the top of the grid                                                                          |
+| bottomlabel | The text to display on the bottom of the grid                                                                       |
+| maxy        | The Maximum number the grid can reach on the y axis                                                                 |
+| maxx        | The Maximum number the grid can reach on the x axis                                                                 |
+| arrowsteps  | The distance the circle moves when utilizing the arrow keys                                                         |
+| precision   | How many decimal places (example: 1 = 1.0, 2 = 1.00)                                                                |
+| slot        | There are 3 slots available, (header, content, footer)                                                              |
+| style       | CSS style overrides                                                                                                 |
+| sound       | Play a rdr sound effect                                                                                             |
+| persist     | Determines if the user input value should persist when changing pages                                               |
+| id          | A custom ID you can give an element (This will prevent duplicates if you are registering an element more than once) |
 
 Example Usage:
 
@@ -507,8 +516,8 @@ end)
 ```
 
 ## Add Custom HTML to Page
-![image](https://github.com/FeatherFramework/feather-website/assets/10902965/ff2f5be7-909d-4c9e-abda-fde2d2cb3d2f)
 
+![image](https://github.com/FeatherFramework/feather-website/assets/10902965/ff2f5be7-909d-4c9e-abda-fde2d2cb3d2f)
 
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -924,4 +933,28 @@ RegisterCommand('TestMenu', function()
     })
 end)
 
+```
+
+## Use Notification
+
+| Parameter       | Description                                                          |
+| --------------- | -------------------------------------------------------------------- |
+| type            | info, success, warning, error, default                               |
+| hideProgressBar | hide the progressbar (true/false)                                    |
+| rtl             | rtl language (true/false)                                            |
+| transition      | bounce, flip, slide, zoom                                            |
+| autoClose       | time to close in milliseconds                                        |
+| position        | top-left top-center top-right bottom-left bottom-center bottom-right |
+| style           | CSS style overrides                                                  |
+| toastStyle      | CSS style overrides                                                  |
+| progressStyle   | CSS style overrides                                                  |
+| icon            | Can copy/paste emoji here. Or set to true for default icons.         |
+
+Example Usage:
+
+```lua
+FeatherMenu:Notify({ message = 'hello world' }, function(data)
+ -- Callback on opened and closed.
+ print(data.type .. ' : ' .. data.id)
+end)
 ```
