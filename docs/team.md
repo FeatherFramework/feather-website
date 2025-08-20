@@ -70,12 +70,27 @@ const developers = [
         links: [
           { icon: 'github', link: 'https://github.com/BurntJannings' }
         ]
-    }
+    },
+    {
+        avatar: 'https://avatars.githubusercontent.com/u/37031311?s=96&v=4',
+        name: 'Apollyon',
+        title: 'Developer',
+        links: [
+          { icon: 'github', link: 'https://github.com/JusCampin' }
+        ]
+    },
+    {
+        avatar: 'https://avatars.githubusercontent.com/u/2729972?v=4&size=64',
+        name: 'iseeyoucopy',
+        title: 'Developer',
+        links: [
+          { icon: 'github', link: 'https://github.com/iseeyoucopy' }
+        ]
+    },
 ]
 
 const staff = [
-  
-    {
+     {
         avatar: 'https://avatars.githubusercontent.com/u/37031311?s=96&v=4',
         name: 'Apollyon',
         title: 'Staff',

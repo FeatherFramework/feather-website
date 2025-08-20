@@ -178,7 +178,7 @@ MyFirstPage:RegisterElement('bottomline', {
 })
 ```
 
-## Add Test Display to Page
+## Add Text Display to Page
 
 | Parameter | Description                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -958,3 +958,82 @@ FeatherMenu:Notify({ message = 'hello world' }, function(data)
  print(data.type .. ' : ' .. data.id)
 end)
 ```
+
+## **ImageBoxContainer Registration**
+
+This component allows you to register multiple **image boxes** inside a container, where each image box can have a label, tooltip, image, and sound. The container will listen for **click events** and can display descriptions dynamically.
+
+![image](https://example.com/path-to-your-image.png)
+
+| Parameter  | Description                                                                                                    |
+|------------|----------------------------------------------------------------------------------------------------------------|
+| `slot`     | Defines where the image box container will be placed (e.g., `header`, `content`, `footer`).                    |
+| `items`    | An array of **image box items**, each containing `type`, `index`, `data`, and other properties.                |
+| `type`     | Specifies that the element is an `imagebox`.                                                                   |
+| `index`    | A unique identifier for each image box within the container.                                                   |
+| `data`     | Contains the properties for the individual `imagebox`.                                                         |
+| `label`    | The label displayed below the image.                                                                           |
+| `tooltip`  | The description shown when hovering over the image box.                                                        |
+| `style`    | CSS style overrides for customizing the appearance of the image box.                                           |
+| `img`      | The image URL to be displayed in the image box.                                                                |
+| `disabled` | If set to `true`, the image box will be visually dimmed and non-interactive.                                   |
+| `sound`    | Optional sound configuration that plays when the image box is clicked.                                         |
+
+## **Example Usage:**
+
+```lua
+MyFirstPage::RegisterElement('imageboxcontainer', {
+    slot = "content",
+    items = {
+        {
+            type = "imagebox",
+            index = 201,
+            data = {
+                img = "",
+                label = "x5",
+                tooltip = "Restores health",
+                style = { margin = "5px" },
+                sound = { action = "SELECT", soundset = "HUD_SHOP" },
+                disabled = false
+            }
+        },
+        {
+            type = "imagebox",
+            index = 202,
+            data = {
+                img = "nui://feather-inventory/ui/images/items/adjust_seat.png",
+                label = "HOT",
+                tooltip = "Keeps you hydrated",
+                style = { margin = "5px" },
+                sound = { action = "SELECT", soundset = "HUD_SHOP" },
+                disabled = false
+            }
+        },
+        -- Additional Image Boxes
+        {
+            type = "imagebox",
+            index = 203,
+            data = {
+                img = "nui://feather-inventory/ui/images/items/clothing_hl_player_hat_045_1.png",
+                label = "99",
+                tooltip = "Tasty snack",
+                style = { margin = "5px" },
+                sound = { action = "SELECT", soundset = "HUD_SHOP" }
+            }
+        },
+        {
+            type = "imagebox",
+            index = 204,
+            data = {
+                img = "nui://feather-inventory/ui/images/items/clothing_hl_player_hat_046_1.png",
+                label = "★",
+                tooltip = "Can revive your horse",
+                style = { margin = "5px" },
+                sound = { action = "SELECT", soundset = "HUD_SHOP" }
+            }
+        }
+    }
+}, function(data)
+    print("[ImageBoxContainer] Child clicked:")
+    print(json.encode(data.child))  -- This prints the clicked image box data
+end)
