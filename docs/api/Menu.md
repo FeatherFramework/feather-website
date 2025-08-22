@@ -963,7 +963,8 @@ end)
 
 This component allows you to register multiple **image boxes** inside a container, where each image box can have a label, tooltip, image, and sound. The container will listen for **click events** and can display descriptions dynamically.
 
-![image](https://example.com/path-to-your-image.png)
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/c189e413-7e13-4554-af70-d291c3f5da5d" />
+
 
 | Parameter  | Description                                                                                                    |
 |------------|----------------------------------------------------------------------------------------------------------------|
