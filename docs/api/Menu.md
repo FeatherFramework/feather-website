@@ -980,10 +980,10 @@ This component allows you to register multiple **image boxes** inside a containe
 | `disabled` | If set to `true`, the image box will be visually dimmed and non-interactive.                                   |
 | `sound`    | Optional sound configuration that plays when the image box is clicked.                                         |
 
-## **Example Usage:**
+Example Usage:
 
 ```lua
-MyFirstPage::RegisterElement('imageboxcontainer', {
+MyFirstPage:RegisterElement('imageboxcontainer', {
     slot = "content",
     items = {
         {
