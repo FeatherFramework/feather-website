@@ -40,13 +40,13 @@ export default {
     ],
     sidebar: {
       "/api/": getSidebar({
-        contentRoot: "/docs",
+        contentRoot: "docs",
         contentDirs: ["api"],
         collapsible: true,
         collapsed: false,
       }),
       "/api": getSidebar({
-        contentRoot: "/docs",
+        contentRoot: "docs",
         contentDirs: ["api"],
         collapsible: true,
         collapsed: false,
