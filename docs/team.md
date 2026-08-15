@@ -47,28 +47,11 @@ const developers = [
         ]
     },
     {
-        avatar: 'https://avatars.githubusercontent.com/u/119366047?v=4',
-        name: 'Jake2k4',
-        title: 'Developer/Project Manager',
-        links: [
-          { icon: 'github', link: 'https://github.com/jakeyboi1' },
-          { icon: 'youtube', link: 'https://youtube.com/@Jake2k4-id9ym' }
-        ]
-    },
-    {
         avatar: 'https://avatars.githubusercontent.com/u/47730893?s=96&v=4',
         name: 'SavSin',
         title: 'Developer',
         links: [
           { icon: 'github', link: 'https://github.com/DavFount' }
-        ]
-    },
-    {
-        avatar: 'https://avatars.githubusercontent.com/u/82676805?v=4',
-        name: 'Jannings',
-        title: 'Developer',
-        links: [
-          { icon: 'github', link: 'https://github.com/BurntJannings' }
         ]
     },
     {
@@ -90,12 +73,31 @@ const developers = [
 ]
 
 const staff = [
-     {
-        avatar: 'https://avatars.githubusercontent.com/u/37031311?s=96&v=4',
-        name: 'Apollyon',
+    {
+        avatar: 'https://cdn.discordapp.com/avatars/1011606164489904209/c28b4baa853642c3fe2b82c3414b8298.webp?size=128',
+        name: 'Charlie',
         title: 'Staff',
         links: [
-          { icon: 'github', link: 'https://github.com/JusCampin' }
+        ]
+    }
+]
+
+const retired = [
+    {
+        avatar: 'https://avatars.githubusercontent.com/u/119366047?v=4',
+        name: 'Jake2k4',
+        title: 'Developer/Project Manager',
+        links: [
+          { icon: 'github', link: 'https://github.com/jakeyboi1' },
+          { icon: 'youtube', link: 'https://youtube.com/@Jake2k4-id9ym' }
+        ]
+    },
+    {
+        avatar: 'https://avatars.githubusercontent.com/u/82676805?v=4',
+        name: 'Jannings',
+        title: 'Developer',
+        links: [
+          { icon: 'github', link: 'https://github.com/BurntJannings' }
         ]
     },
     {
@@ -114,13 +116,6 @@ const staff = [
           { icon: 'github', link: 'https://github.com/Fistsofury' }
         ]
     },
-    {
-        avatar: 'https://cdn.discordapp.com/avatars/1011606164489904209/c28b4baa853642c3fe2b82c3414b8298.webp?size=128',
-        name: 'Charlie',
-        title: 'Staff',
-        links: [
-        ]
-    }
 ]
 </script>
 
@@ -141,6 +136,13 @@ const staff = [
     <template #lead></template>
     <template #members>
       <VPTeamMembers size="medium" :members="staff" />
+    </template>
+  </VPTeamPageSection>
+  <VPTeamPageSection>
+    <template #title>Retired</template>
+    <template #lead></template>
+    <template #members>
+      <VPTeamMembers size="medium" :members="retired" />
     </template>
   </VPTeamPageSection>
 </VPTeamPage>
