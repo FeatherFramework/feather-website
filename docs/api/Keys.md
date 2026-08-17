@@ -33,7 +33,7 @@ local myKeyListener = Feather.Keys:RegisterListener(keycode, function ()
     -- Do something
 end)
 
-Feather.Keys:RemoveListener({ myKeyListener.keycode, myKeyListener.postition })
+Feather.Keys:RemoveListener({ myKeyListener.keycode, myKeyListener.position })
 ```
 
 or
@@ -45,3 +45,5 @@ end)
 
 myKeyListener:RemoveListener()
 ```
+
+The listener is also removed automatically when the resource that registered it stops.
