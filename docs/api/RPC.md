@@ -6,15 +6,20 @@ An RPC allows developers to easily communicate between the client and server wit
 
 Learn more here: https://en.wikipedia.org/wiki/Remote_procedure_call
 
-## Register your remote prodecure
+## Register your remote procedure
 
-> FeatherCore.RPC.Register(name, callback)
+> FeatherCore.RPC.Register(name, callback [, options])
 
 - `name<string>` - remote method name
 - `callback<function>` - method function (see method callback)
+- `options<table>` - optional procedure rate and payload policy
 
 ```lua
-FeatherCore.RPC.Register("doSomething", myProcedure)
+FeatherCore.RPC.Register("my-resource:doSomething", myProcedure, {
+    windowMs = 1000,
+    maxCalls = 5,
+    maxPayloadBytes = 4096
+})
 
 -- `params<table>` - params passed to method by remote caller
 -- `res<function>` - function for returning values to the rpc call asynchronously
@@ -34,15 +39,20 @@ end
 
 Calls remote method.
 
-> FeatherCore.RPC.Call(name, params, callback [, player])
+> FeatherCore.RPC.Call(name, params, callback [, player, timeoutMs])
 
 - `name<string>` - method name
 - `params<table>` - params passed to method
 - `callback<function>` - callback called when results are received
 - `player<player>` - optional player source to call method on (only for server-side)
+- `timeoutMs<number>` - optional callback timeout
 
 ```lua
-FeatherCore.RPC.Call("doSomethingRemote", { text = "World", delay = 1000 }, function (result)
+FeatherCore.RPC.Call("my-resource:doSomethingRemote", { text = "World", delay = 1000 }, function (result, rpcError)
+    if rpcError then
+        print(rpcError.code, rpcError.message)
+        return
+    end
     print("[Example] Callback result: "..tostring(result))
 end)
 ```
@@ -51,20 +61,22 @@ end)
 
 Calls remote method asynchronously. Can only be used inside `CreateThread`.
 
-> FeatherCore.RPC.CallAsync(name, params [, player])
+> FeatherCore.RPC.CallAsync(name, params [, player, timeoutMs])
 
 - `name<string>` - method name
 - `params<table>` - params passed to method
 - `player<player>` - optional player source to call method on (only for server-side)
-- returns `result<any>` - any data returned by remote method
+- `timeoutMs<number>` - optional callback timeout
+- returns `result<any>, rpcError<table|nil>` - data or a structured timeout/rate-limit error
 
 ```lua
 CreateThread(function ()
     -- Some params passed to server-side method
-    local result = FeatherCore.RPC.CallAsync("doSomethingRemote", {
+    local result, rpcError = FeatherCore.RPC.CallAsync("my-resource:doSomethingRemote", {
         text = "World",
         delay = 2000
     })
+    if rpcError then print(rpcError.code, rpcError.message) return end
     print("[Example] Async result: "..tostring(result))
 end)
 ```
@@ -80,7 +92,7 @@ Calls remote method without receiving return values.
 - `player<player>` - optional player source to call method on (only for server-side)
 
 ```lua
-FeatherCore.RPC.Notify("doSomethingRemote", { text = "World", delay = 1000 }, function (result)
-    print("[Example] Callback result: "..tostring(result))
-end)
+FeatherCore.RPC.Notify("my-resource:doSomethingRemote", { text = "World", delay = 1000 })
 ```
+
+Use namespaced procedure names to avoid collisions. Notifications do not receive rate-limit errors; use `Call` when the caller needs confirmation.
