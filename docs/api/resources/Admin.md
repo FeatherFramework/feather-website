@@ -8,19 +8,21 @@ Feather Admin is the operator interface for moderation, reports, cases, player n
 
 ## Requirements and installation
 
-This version of Admin still requires [Legacy: Menu v1](/api/resources/Menuv1) (`feather-menu`). Keep that dependency until Admin's menu integration is migrated. [Menu v2](/api/resources/Menuv2) is the official system for new Feather development; installing it does not replace Admin's existing v1 API calls.
+Admin uses [Menu v2](/api/resources/Menuv2) and character-scoped roles from Feather Authority.
 
 ```cfg
 ensure oxmysql
 ensure feather-core
+ensure feather-character
+ensure feather-organizations
+ensure feather-authority
 ensure feather-toolkit
-ensure feather-roles
 ensure feather-inventory
-ensure feather-menu
+ensure feather-menu-v2
 ensure feather-admin
 ```
 
-Configure the menu command, reports, moderation limits, logging/webhook, hierarchy, and permission matrix in `configs/`. Grant the first Owner through Feather Roles before using Admin for routine role management.
+Configure the menu command, reports, moderation limits, logging/webhook, hierarchy, and permission matrix in `configs/`. Grant the first character-scoped Owner from the server console with `AdminBootstrapOwner <connectedSource> <stableRequestId>` before using Admin for routine role management.
 
 ## Public API
 
@@ -36,5 +38,5 @@ Connection-gate integrations should use the current Core gate and Admin moderati
 
 - Keep permissions least-privileged.
 - Configure Discord webhook delivery only for Admin audit reporting; Core does not provide generic Discord helpers.
-- Use Admin’s Inventory and Roles integrations rather than editing those databases.
+- Use Admin’s Inventory and Authority integrations rather than editing those databases.
 - Run the supplied contract and persistence smoke tests in staging after upgrades.
