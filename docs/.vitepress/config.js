@@ -39,6 +39,13 @@ export default {
           ],
         },
         {
+            text: "Database",
+            collapsed: false,
+            items: [
+                { text: "MySQL", link: "/api/MySQL" },
+            ],
+        },
+        {
           text: "Framework Core",
           collapsed: false,
           items: [
